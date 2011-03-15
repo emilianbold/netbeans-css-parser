@@ -53,6 +53,10 @@
 
 	<target name="test" depends="compile-tests">
 		<junit fork="yes" haltonfailure="no" haltonerror="no" dir="." maxmemory="700m">
+			<assertions>
+				<enable/>
+			</assertions>
+			
 			<classpath refid="junit.class.path" />
 			<formatter type="xml" />
 			<formatter type="brief" usefile="false" />

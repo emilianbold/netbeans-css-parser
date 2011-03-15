@@ -111,8 +111,7 @@ public class OffsetRangeTest extends TestCase {
         } catch (AssertionError e) {
             success = true;
         }
-        // TODO: fails if (?) extending TestCase
-        // assertTrue(success);
+        assertTrue(success);
     }
     
     public void testComparator() {
