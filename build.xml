@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="netbeans-css-parser" default="compile" basedir=".">
+	<property name="src.dir" value="src" />
+	<property name="lib.dir" value="lib" />
+	<property name="test.src.dir" value="test" />
+
+	<property name="top.build.dir" value="build/" />
+	<property name="build.dir" value="build/main" />
+	<property name="test.build.dir" value="build/test" />
+	<property name="test.reports" value="build/test-reports" />
+	
+	<property name="jar.build.dir" value="build/jar" />
+	<property name="jar.build.name" value="netbeans-css-parser" />
+
+	<path id="base.class.path">
+		<fileset dir="${lib.dir}" includes="*.jar" />
+	</path>
+
+	<path id="test.class.path">
+		<path refid="base.class.path" />
+		<pathelement location="${build.dir}" />
+	</path>
+
+	<path id="junit.class.path">
+		<path refid="test.class.path" />
+		<pathelement location="${test.build.dir}" />
+	</path>
+
+	<target name="init">
+		<mkdir dir="${build.dir}" />
+	</target>
+
+	<target name="init-test">
+		<mkdir dir="${test.build.dir}" />
+		<mkdir dir="${test.reports}" />
+	</target>
+
+	<target name="compile" depends="init">
+		<javac includeantruntime="false" srcdir="${src.dir}" destdir="${build.dir}">
+			<classpath refid="base.class.path" />
+		</javac>
+	</target>
+
+	<target name="compile-tests" depends="compile, init-test">
+		<javac includeantruntime="false" srcdir="${test.src.dir}" destdir="${test.build.dir}" encoding="UTF-8">
+			<classpath refid="test.class.path" />
+		</javac>
+	</target>
+
+	<target name="clean" depends="init">
+		<delete dir="${top.build.dir}" />
+	</target>
+
+	<target name="test" depends="compile-tests">
+		<junit fork="yes" haltonfailure="no" haltonerror="no" dir="." maxmemory="700m">
+			<classpath refid="junit.class.path" />
+			<formatter type="xml" />
+			<formatter type="brief" usefile="false" />
+
+			<test name="org.netbeans.modules.csl.api.OffsetRangeTest" todir="${test.reports}" />
+			<test name="org.netbeans.modules.css.parser.CssParserTest" todir="${test.reports}" />
+			<test name="org.netbeans.modules.css.parser.CssParserTokenManagerTest" todir="${test.reports}" />
+			<test name="org.netbeans.modules.css.parser.SimpleNodeUtilTest" todir="${test.reports}" />
+		</junit>
+	</target>
+
+	<target name="jar" depends="compile">
+		<mkdir dir="${jar.build.dir}" />
+		<jar destfile="${jar.build.dir}/${jar.build.name}.jar" basedir="${build.dir}">
+		</jar>
+	</target>
+</project>
