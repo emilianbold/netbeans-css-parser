@@ -44,16 +44,18 @@ package org.netbeans.modules.css.parser;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
+
 import junit.framework.Test;
+import junit.framework.TestCase;
 import junit.framework.TestSuite;
+
 import org.junit.Assert;
-import org.netbeans.modules.css.editor.test.TestBase;
 
 /**
  *
  * @author marekfukala
  */
-public class CssParserTest extends TestBase {
+public class CssParserTest extends TestCase {
 
     public CssParserTest(String testName) {
         super(testName);
