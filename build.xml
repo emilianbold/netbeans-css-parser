@@ -11,6 +11,7 @@
 	
 	<property name="jar.build.dir" value="build/jar" />
 	<property name="jar.build.name" value="netbeans-css-parser" />
+	<property name="jar.build.ver" value="1.0" />
 
 	<path id="base.class.path">
 		<fileset dir="${lib.dir}" includes="*.jar" />
@@ -70,7 +71,7 @@
 
 	<target name="jar" depends="compile">
 		<mkdir dir="${jar.build.dir}" />
-		<jar destfile="${jar.build.dir}/${jar.build.name}.jar" basedir="${build.dir}">
+		<jar destfile="${jar.build.dir}/${jar.build.name}-${jar.build.ver}.jar" basedir="${build.dir}">
 		</jar>
 	</target>
 </project>
