@@ -10,7 +10,7 @@
     <artifactId>css-parser</artifactId>
     <packaging>jar</packaging>
     <name>CSS Parser</name>
-    <version>1.1</version>
+    <version>1.2-SNAPSHOT</version>
     <description>A CSS Parser extract from the NetBeans CSS modules</description>
     <url>https://bitbucket.org/cristiantolnai/netbeans-css-parser</url>
     
