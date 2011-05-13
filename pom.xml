@@ -1,0 +1,70 @@
+
+<project>
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>ro.josekibold</groupId>
+    <artifactId>css-parser</artifactId>
+    <packaging>jar</packaging>
+    <name>CSS Parser</name>
+    <version>1.1-SNAPSHOT</version>
+    <description>A CSS Parser extract from the NetBeans CSS modules</description>
+    <url>https://bitbucket.org/cristiantolnai/netbeans-css-parser</url>
+    
+    <build>
+        <sourceDirectory>src</sourceDirectory>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.6</source>
+                        <target>1.6</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+    
+    
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <connection>scm:hg:https://bitbucket.org/cristiantolnai/netbeans-css-parser</connection>
+        <developerConnection>scm:hg:https://bitbucket.org/cristiantolnai/netbeans-css-parser</developerConnection>
+        <url>https://bitbucket.org/cristiantolnai/netbeans-css-parser</url>
+    </scm>
+    <developers>
+        <developer>
+            <id>cristian</id>
+            <name>Cristian Tolnai</name>
+        </developer>
+        <developer>
+            <id>emilian</id>
+            <name>Emilian Bold</name>
+            <email>emilian.bold.public@gmail.com</email>
+        </developer>
+    </developers>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+  <!--
+  AVOID RELEASE REPOSITORY/PLUGINREPOSITORY:
+  <repositories></repositories>
+  <pluginRepositories></pluginRepositories>
+  -->
+</project>
