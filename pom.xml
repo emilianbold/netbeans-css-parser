@@ -38,7 +38,6 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
-	    scm:git:ssh://git@github.com:emilianbold/netbeans-css-parser.git
     <scm>
         <connection>scm:git:ssh://git@github.com:emilianbold/netbeans-css-parser.git</connection>
         <developerConnection>scm:git:ssh://git@github.com:emilianbold/netbeans-css-parser.git</developerConnection>
