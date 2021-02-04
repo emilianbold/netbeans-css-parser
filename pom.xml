@@ -12,7 +12,7 @@
     <name>CSS Parser</name>
     <version>1.2-SNAPSHOT</version>
     <description>A CSS Parser extract from the NetBeans CSS modules</description>
-    <url>https://bitbucket.org/cristiantolnai/netbeans-css-parser</url>
+    <url>https://github.com/emilianbold/netbeans-css-parser</url>
     
     <build>
         <sourceDirectory>src</sourceDirectory>
@@ -39,9 +39,9 @@
         </license>
     </licenses>
     <scm>
-        <connection>scm:hg:ssh://hg@bitbucket.org/cristiantolnai/netbeans-css-parser</connection>
-        <developerConnection>scm:hg:ssh://hg@bitbucket.org/cristiantolnai/netbeans-css-parser</developerConnection>
-        <url>https://bitbucket.org/cristiantolnai/netbeans-css-parser</url>
+        <connection>scm:git:ssh://git@github.com:emilianbold/netbeans-css-parser.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:emilianbold/netbeans-css-parser.git</developerConnection>
+        <url>https://github.com/emilianbold/netbeans-css-parser</url>
     </scm>
     <developers>
         <developer>
